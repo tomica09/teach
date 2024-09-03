@@ -5,7 +5,7 @@ import KakaoProvider from "next-auth/providers/kakao";
 export default NextAuth({
   providers: [
     KakaoProvider({
-      clientId: process.env.KAKAO_CLIENT_ID, // Rest API Key
+      clientId: process.env.KAKAO_CLIENT_ID,
     }),
   ],
   pages: {
