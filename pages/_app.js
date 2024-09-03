@@ -1,5 +1,5 @@
 // pages/_app.js
-import "../styles/globals.css"; // 전역 CSS 스타일
+import "../styles/globals.css"; // Ensure this file exists and path is correct
 import { SessionProvider } from "next-auth/react";
 
 function MyApp({ Component, pageProps }) {
