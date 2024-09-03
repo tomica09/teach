@@ -1,17 +1,15 @@
-require("dotenv").config();
-
 const express = require("express");
 const bodyParser = require("body-parser");
 const axios = require("axios");
 const qs = require("querystring");
 
-const clientId = process.env.KAKAO_REST_API_KEY; // 환경 변수 사용
-const redirectUri = process.env.REDIRECT_URI; // 환경 변수 사용
-let accessToken = ""; // 사용자 인증 후 발급받은 액세스 토큰을 저장
-
 const app = express();
 app.use(bodyParser.json());
 app.use(express.static("public")); // 프론트엔드 파일 제공
+
+const clientId = "3c369511c330c46e537f90deaf76efdb";
+const redirectUri = "http://localhost:3000/oauth/callback";
+let accessToken = ""; // 사용자 인증 후 발급받은 액세스 토큰을 저장
 
 // 카카오 로그인 페이지로 리다이렉트
 app.get("/login", (req, res) => {
